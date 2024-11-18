@@ -48,7 +48,8 @@ class StatsListAdapter(
 //                entryOf(index.toFloat(), sortedResults[index])
 //            } as ArrayList<FloatEntry>)
 //            testDataStats.setModel(chartEntryModel)
-            testDateTime.text = healthData.healthId?.convertTimestampToDateTime()
+            //testDateTime.text = healthData.healthId?.convertTimestampToDateTime()
+            testDateTime.text = healthData.healthId
 
             parentLayout.setOnClickListener {
                 listener(healthData)

@@ -67,8 +67,9 @@ object DateTimeExtension {
     @RequiresApi(Build.VERSION_CODES.O)
     fun String.convertTimestampToDateTime(): String {
         val timestampLong = this.toLongOrNull() ?: return "" // Return empty string if parsing fails
-        val instant = Instant.ofEpochMilli(timestampLong)
-        val dateTime = LocalDateTime.ofInstant(instant, ZoneId.systemDefault())
+        //val instant = Instant.ofEpochMilli(timestampLong)
+        //val dateTime = LocalDateTime.ofInstant(instant, ZoneId.systemDefault())
+        val dateTime = LocalDateTime.now()
         val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm", Locale.getDefault())
         return dateTime.format(formatter)
     }
